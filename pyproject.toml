@@ -15,7 +15,7 @@ authors = [
 urls = {Homepage = "https://github.com/paul-gauthier/grep-ast"}
 dependencies = [
     "tree-sitter==0.24.0",
-    "tree-sitter-languages>=1.8.0",
+    "tree-sitter-language-pack",
     "pathspec",
     "pygments",
 ]

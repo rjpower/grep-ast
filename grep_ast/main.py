@@ -86,7 +86,7 @@ def process_filename(filename, args):
 
     try:
         tc = TreeContext(
-            filename, code, color=args.color, verbose=args.verbose, line_number=args.line_number
+            filename=filename, code=code, color=args.color, verbose=args.verbose, line_number=args.line_number
         )
     except ValueError:
         return

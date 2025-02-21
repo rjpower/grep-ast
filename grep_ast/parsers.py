@@ -1,7 +1,5 @@
 import os
 
-from .tsl import USING_TSL_PACK
-
 # Updated mapping of file extensions to parsers
 PARSERS = {
     ".py": "python",
@@ -58,10 +56,10 @@ PARSERS = {
     ".yaml": "yaml",
 }
 
-if USING_TSL_PACK:
-    del PARSERS[".ml"]
-    del PARSERS[".ql"]
-    PARSERS[".cs"] = "csharp"
+# tree-sitter-language-pack doesn't support these
+del PARSERS[".ml"]
+del PARSERS[".ql"]
+PARSERS[".cs"] = "csharp"
 
 
 def filename_to_lang(filename):
