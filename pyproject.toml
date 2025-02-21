@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "grep-ast"
+version = "0.6.1"
+description = "A tool to grep through the AST of a source file"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Paul Gauthier", email = "paul@grep-ast.com" }
+]
+urls = {Homepage = "https://github.com/paul-gauthier/grep-ast"}
+dependencies = [
+    "tree-sitter",
+    "tree-sitter-languages",
+    "pygments",
+]
+
+[project.scripts]
+grep-ast = "grep_ast.main:main"
+gast = "grep_ast.main:main"
